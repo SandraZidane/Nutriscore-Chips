@@ -32,7 +32,7 @@ st.markdown("# Quel est le nutriscore de vos chips préférés ?")
 
 
 # DataFrame :
-df = pd.read_csv("../vivadata-student/data/output_chips.csv")
+df = pd.read_csv("output_chips.csv")
 #df
 
 
