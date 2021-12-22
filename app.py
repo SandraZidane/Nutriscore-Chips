@@ -141,6 +141,10 @@ with col1:
     st.write("Sel : ", salt_user, "g")
     st.write("Sodium : ", sodium_user, "g")
     st.write("Sucres : ", sugars_user, "g")
+    st.write(" ")
+    st.write(" ")
+    st.write("Toutes les informations concernant ce produit sont à retrouver sur : ", url_user, ".")
+
 
 
 with col2:
@@ -260,5 +264,3 @@ with col2:
             st.write("Une erreur s'est produite. Merci de sélectionner un autre produit.")
 
         st.info("Cette information n'est pas fournie par le fabricant. Il s'agit d'une estimation.")
-        st.write(" ")
-        st.write("Toutes les informations concernant ce produit sont à retrouver sur : ", url_user, ".")
