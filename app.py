@@ -47,8 +47,6 @@ add_selectbox = st.sidebar.markdown(
     "Cette application fournit le nutriscore de tous les paquets de chips sur le marché :"
 )
 
-#st.sidebar.info("dommage")
-#st.sucess, st.warning, st.error and st.exception
 
 add_selectbox = st.sidebar.markdown(
     "- Elle indique le nutriscore d'un paquet de chips s'il existe déjà"
@@ -58,6 +56,29 @@ add_selectbox = st.sidebar.markdown(
     "- Elle estime le nutriscore d'un paquet s'il n'existe pas"
 )
 
+add_selectbox = st.sidebar.markdown(
+    "  "
+)
+
+add_selectbox = st.sidebar.markdown(
+    "  "
+)
+
+add_selectbox = st.sidebar.markdown(
+    "  "
+)
+
+add_selectbox = st.sidebar.markdown(
+    "L'algorithme prend en compte l'ensemble des variables détaillées dans cet outil :"
+)
+
+add_selectbox = st.sidebar.markdown(
+    "- les caractéristiques du produit,"
+)
+
+add_selectbox = st.sidebar.markdown(
+    "- et les informations nutritionelles pour 100 g de produit,"
+)
 
 # Dans le cadre principal :
 barcode_user = st.selectbox(
@@ -106,6 +127,7 @@ st.write('Le code barre ', barcode_user, 'correspond au produit ', product_user,
 col1, col2 = st.columns(2)
 
 with col1:
+    st.write(" ")
     st.markdown("#### Caractéristiques du produit :")
     st.write("Catégorie : ", pnns_user)
     st.write("Nombre d'additifs : ", nb_addi_user)
@@ -119,7 +141,6 @@ with col1:
     st.write("Sel : ", salt_user, "g")
     st.write("Sodium : ", sodium_user, "g")
     st.write("Sucres : ", sugars_user, "g")
-
 
 
 with col2:
@@ -138,6 +159,9 @@ with col2:
         elif nutriscore_user == "E":
             st.image(image_nutri_e)
         st.info("Cette information est fournie par le fabricant.")
+        st.write(" ")
+        st.write(" ")
+        st.write("Toutes les informations concernant ce produit sont à retrouver sur : ", url_user, ".")
     else:
         st.markdown("#### Nutri-score estimé du produit :")
         algo_user = st.selectbox(
@@ -236,8 +260,5 @@ with col2:
             st.write("Une erreur s'est produite. Merci de sélectionner un autre produit.")
 
         st.info("Cette information n'est pas fournie par le fabricant. Il s'agit d'une estimation.")
-
-
-
-
-st.text(url_user)
+        st.write(" ")
+        st.write("Toutes les informations concernant ce produit sont à retrouver sur : ", url_user, ".")
