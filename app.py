@@ -163,9 +163,7 @@ with col2:
         elif nutriscore_user == "E":
             st.image(image_nutri_e)
         st.info("Cette information est fournie par le fabricant.")
-        st.write(" ")
-        st.write(" ")
-        st.write("Toutes les informations concernant ce produit sont à retrouver sur : ", url_user, ".")
+
     else:
         st.markdown("#### Nutri-score estimé du produit :")
         algo_user = st.selectbox(
